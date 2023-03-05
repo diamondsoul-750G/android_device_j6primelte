@@ -18,6 +18,8 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 OVERLAY_DEVICE := jprime
 
+PRODUCT_PACKAGES += libprotobuf-cpp-lite-vendorcompat libprotobuf-cpp-full-vendorcompat
+
 # Inherit from msm8917-common
 $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 
