@@ -23,7 +23,6 @@ PRODUCT_PACKAGES += libprotobuf-cpp-lite-vendorcompat libprotobuf-cpp-full-vendo
 # Inherit from msm8917-common
 $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 
-
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/sdm450_camera_j6primelte.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sdm450_camera_j6primelte.xml
