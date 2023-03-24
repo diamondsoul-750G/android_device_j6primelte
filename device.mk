@@ -14,9 +14,9 @@
 # limitations under the License.
 
 # Fingerprint
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+#DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-OVERLAY_DEVICE := jprime
+#OVERLAY_DEVICE := jprime
 
 PRODUCT_PACKAGES += libprotobuf-cpp-lite-vendorcompat libprotobuf-cpp-full-vendorcompat
 
@@ -26,10 +26,14 @@ $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/sdm450_camera_j6primelte.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sdm450_camera_j6primelte.xml
+    
+# Fingerprint
+#PRODUCT_PACKAGES += \
+#    android.hardware.biometrics.fingerprint@2.1-service.samsung.rc
 	
 # Permissions
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+#PRODUCT_COPY_FILES += \
+#    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/#android.hardware.fingerprint.xml
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
