@@ -21,17 +21,10 @@ $(call inherit-product, device/samsung/msm8917-common/msm8917.mk)
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/sdm450_camera_j6primelte.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/sdm450_camera_j6primelte.xml
-    
-# Fingerprint
-#PRODUCT_PACKAGES += \
-#    fingerprint.msm8937
-	
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung8917
-	
+		
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
